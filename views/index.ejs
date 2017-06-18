@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Dockerfile Security Search</title>
+  <link rel="icon" href="images/favicon.png" type="image/png" sizes="16x16">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="iLand Multipurpose Landing Page Template">
+  <meta name="keywords" content="iLand HTML Template, iLand Landing Page, Landing Page Template">
+  <link href="stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="https://fonts.googleapis.com/css?family=Open%20Sans:300,400,500,600,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="stylesheets/animate.css">
+  <!-- Resource style -->
+  <link rel="stylesheet" href="stylesheets/owl.carousel.css">
+  <link rel="stylesheet" href="stylesheets/owl.theme.css">
+  <link rel="stylesheet" href="stylesheets/ionicons.min.css">
+  <link rel="stylesheet" href="stylesheets/myCSS.css">
+  <!-- Resource style -->
+  <link href="stylesheets/style.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+<div class="wrapper">
+  <div class="container">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+          <a class="navbar-brand page-scroll" href="#main"><img src="images/dockericon.png" width="80" height="30" alt="iLand" /></a> </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a class="page-scroll" href="#main">Main</a></li>
+            <li><a class="page-scroll" href="#features">Result</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+
+  <div class="main app form" id="main"><!-- Main Section-->
+    <div class="hero-section">
+      <div class="container nopadding">
+        <div class="col-md-5"> <img class="img-responsive wow fadeInUp" data-wow-delay="0.1s" src="images/docker.png" alt="App" /> </div>
+        <div class="col-md-7">
+          <div class="hero-content">
+            <h1 class="wow fadeInUp" data-wow-delay="0.1s">Check your dockerfile</h1>
+            <p class="wow fadeInUp" data-wow-delay="0.2s"> Enter your docker image by name (e.g.   stackdump/bitwrap-pnml) </p>
+            <div class="sub-form wow fadeInUp" data-wow-delay="0.3s">
+              <form class="subscribe-form wow zoomIn" action="#features" method="get">
+                <input class="mail" placeholder="docker image name" autocomplete="off" id="docker_file_name">
+                <input class="submit-button" type="submit" value="Search" id="subsubmit" onclick="fetch_dockerfile_data($('#docker_file_name').val())">
+              </form>
+              <!-- subscribe message -->
+              <div id="mesaj"></div>
+              <!-- subscribe message -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Client Section -->
+    <div class="client-section">
+      <div class="container text-center">
+        <div class="clients owl-carousel owl-theme">
+        </div>
+      </div>
+    </div>
+    <div class="app-features text-center" id="features">
+      <div class="container">
+        <h1 class="wow fadeInDown" data-wow-delay="0.1s">Dockerfile</h1>
+        <p class="wow fadeInDown" data-wow-delay="0.2s"> The dockerfile of your docker image is in the textarea.
+          <br>If your dockerfile contains something unregular with others, the line will be in red color</p>
+
+        <div class="col-md-3 features-left">
+          <div class="col-md-12 wow fadeInDown" data-wow-delay="0.2s">
+            <div class="feature-single">
+              <h1>Docker image name</h1>
+              <p id="d_name"> </p>
+            </div>
+          </div>
+          <div class="col-md-12 wow fadeInDown" data-wow-delay="0.3s">
+            <div class="feature-single">
+              <h1>DockerHub Url</h1>
+              <p id="dh_url"> </p>
+            </div>
+          </div>
+          <div class="col-md-12 wow fadeInDown" data-wow-delay="0.4s">
+            <div class="feature-single">
+              <h1>Security Level</h1>
+              <p> </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-8" id="df_content">
+          <p>No dockerfile content</p>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <!-- Footer Section -->
+    <div class="footer">
+      <div class="container">
+
+      </div>
+    </div>
+
+  <!-- Scroll To Top -->
+
+  <a id="back-top" class="back-to-top page-scroll" href="#main"> <i class="ion-ios-arrow-thin-up"></i> </a>
+
+  <!-- Scroll To Top Ends-->
+
+</div>
+<!-- Main Section -->
+</div>
+<!-- Wrapper-->
+
+<!-- Jquery and Js Plugins -->
+<script type="text/javascript" src="javascripts/jquery-2.1.1.js"></script>
+<script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="javascripts/plugins.js"></script>
+<script type="text/javascript" src="javascripts/menu.js"></script>
+<script type="text/javascript" src="javascripts/custom.js"></script>
+<script src="javascripts/jquery.subscribe.js"></script>
+<script type="text/javascript" src="javascripts/fetch-data.js"></script>
+</body>
+</html>
